@@ -1,0 +1,42 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.68])
+#AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
+AC_INIT(sys_server,1.0,jeeetchuang@gmail.com)
+AM_INIT_AUTOMAKE(sys_server,1.0)
+AC_CONFIG_SRCDIR([sys.c])
+AC_CONFIG_HEADERS([config.h])
+
+# Checks for programs.
+AC_PROG_CC
+
+# Checks for libraries.
+#AC_PROG_LIBTOOL
+# Check for pthread
+AC_CHECK_LIB(pthread,pthread_create,[LIBS="$LIBS -pthread"],exit 1)
+# Check for libevent
+AC_CHECK_LIB(event,event_set,[LIBS="$LIBS -levent"],exit 1)
+## by zdiv
+#PTHREAD_PRESENT=""
+#AC_CHECK_LIB( pthread, pthread_create, PTHREAD_PRESENT="yes",, $PTHREAD_LIBS
+#-lpthread )
+#if test "x$PTHREAD_PRESENT" = "xyes"; then
+#	AC_DEFINE(HAVE_LIBPTHREAD, 1, [Define if libpthread is present])
+#	PTHREAD_LIBS="-lpthread"
+#	AC_SUBST(PTHREAD_LIBS)
+#fi
+
+# Checks for header files.
+AC_CHECK_HEADERS([arpa/inet.h netinet/in.h stdlib.h string.h sys/socket.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_INLINE
+AC_TYPE_SIZE_T
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+AC_CHECK_FUNCS([memset socket strerror uname])
+AC_CONFIG_FILES([Makefile])
+
+AC_OUTPUT

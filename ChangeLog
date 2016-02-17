@@ -1,0 +1,81 @@
+
+
+
+
+# 29/10/2015 Thu
+Main:
+	Added thread pool manage API.
+	
+Plan:
+	1. Implement system server architecture by pseudo-code.
+	
+	
+# 30/10/2015 Thu
+Main:
+	1.Added DEBUG(file:debug.h)  API.
+	2.Added kenerl list(file:dlist.h) API.
+	3.Added type definition(file:vtype.h) for this system.
+	4.Added event process API(file:sys_event.c/h).
+	
+Plan: This plan will be finished at 6/11/2015
+	1. Implement system server architecture by pseudo-code.
+	
+
+# 2/11/2015 Mon       over work 2h
+Main:
+	1.Added the script file **ctags_.sh** which is update tags file.
+	2.test in linux system.
+
+# 3/11/2015 Tue
+Main:
+	1. add compile environment which built by autotools.
+	2. compiled system server successful.
+
+# Wed, 04 Nov 2015     over work 3h
+Main:
+	1. init network module code.
+	2. cross compiled and ran at arm platform successful.
+
+# Thu, 05 Nov 2015
+Main:
+	1. update process method of net event, ready to add 'libevent'.
+
+Plan:
+	today and tomorrow analysis.
+
+
+
+# ----------------------#06 ~ 13 Nov 2015#------------------------
+# Mon, 16 Nov 2015
+Main: 06 ~ 13 Nov 2015
+	1. Read library 'libevent' API manual and study how to use it.
+	2. Add event driven to trigger program process request.
+	3. Add some note of 'libevent' which summary by JT.
+	4. The server(add event driven) prototype structure was appears.
+
+Plan:
+	Add 
+
+
+# Tue, 17 Nov 2015
+Main:
+	1. Update event structure definition
+	2. Add library libevent.
+
+Plan:
+	Continue adding libevent api, then compile, check, test......
+
+
+# Wed, 18 Nov 2015
+Main:
+	1. Upload new file which hasn't upload at two days ago.
+	1.增加网络监听事件,每隔15秒更新一次数据.
+
+plan:
+	为新的请求建立待处理队列,一次从线程池获取空闲线程处理请求.
+
+
+
+
+
+
