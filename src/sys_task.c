@@ -163,12 +163,16 @@ pending *task_pending_acquire(pending *pend)
 	pending *pendfirst = NULL;
 
 	pthread_mutex_lock(&pendlock);
-	if(list_empty(&pend->pendlist))
+	if(list_empty(&pend->pendlist)){
+		pthread_mutex_unlock(&pendlock);
 		return NULL;
+	}
 
 	pendfirst = list_first_entry(&pend->pendlist, pending, pendlist);
-	if(!pendfirst)
+	if(!pendfirst){
+		pthread_mutex_unlock(&pendlock);
 		return NULL;
+	}
 
 	list_del(&pendfirst->pendlist);
 	pthread_mutex_unlock(&pendlock);
