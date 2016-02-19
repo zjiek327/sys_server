@@ -3,15 +3,21 @@ This program is a server for smart home system.
 The architecture of smarthome system has 3 level:
      	----------------------
      	|					  |
+
      	|		app			  |
+
      	|					  |
      	----------------------
      	|					  |
+
      	|   system server	  |
+
      	|					  |
      	----------------------	
      	|					  |
+
      	|		device		  |
+
      	|					  |
      	----------------------	
 This program is the second level, it provides all kinds of
