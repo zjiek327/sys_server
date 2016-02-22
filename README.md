@@ -67,7 +67,6 @@ Tel: +86-592-6666666
 E-mail: x@x.com.cn
 Address: Room ..., No.x, Road, Soft Park , Xiamen, China 361004
 Website: www.xxx.com.cn 
-         www.elsonic.com.cn
 
 
 
